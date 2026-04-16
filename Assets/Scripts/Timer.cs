@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,12 +17,15 @@ public class Timer : MonoBehaviour
     {
         timer -= Time.deltaTime;
         timerText.text = timer.ToString();
-        if(timer > 0)
+        if (timer > 0)
         {
             GameOver();
         }
     }
 
-    public void GameOver();
+    public void GameOver()
+    {
 
+    }
+    
 }
