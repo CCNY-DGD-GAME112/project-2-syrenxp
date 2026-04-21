@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public virtual void Collect()
     {
-        
+        Debug.Log("Collected Item");
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider collision)
+   {
+       if (collision.CompareTag("Player"))
+
     {
-        
+        // Calls collect function
+        Collect();
+
+        //Destroy collectable
+        Destroy(gameObject);
     }
+   
+
+   }
+
 }
+

@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class Banana : MonoBehaviour
+public class Banana : Collectable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float timeBonus = 5f;
 
-    // Update is called once per frame
-    void Update()
+    public override void Collect()
     {
-        
+    
+    GameManager.Instance.AddTime(timeBonus);
+    Debug.Log("Banana collected. +5 seconds");
+
     }
 }
