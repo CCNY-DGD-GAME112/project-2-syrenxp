@@ -949,6 +949,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3273443882957513129, guid: fe2c9d04ccef4b5489d2f403fdcde86c, type: 3}
+      propertyPath: m_Height
+      value: 4.402623
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273443882957513129, guid: fe2c9d04ccef4b5489d2f403fdcde86c, type: 3}
+      propertyPath: m_Radius
+      value: 2.2013113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273443882957513129, guid: fe2c9d04ccef4b5489d2f403fdcde86c, type: 3}
+      propertyPath: m_Center.z
+      value: -1.2285006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3273443882957513129, guid: fe2c9d04ccef4b5489d2f403fdcde86c, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 88cbe90766aa2264aaffc42670fa0ed0, type: 2}
@@ -2080,7 +2092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d567305e80e8c404481f3bce790edc3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  timer: 120
+  timer: 30
   timerText: {fileID: 2065531470}
 --- !u!4 &2139436684
 Transform:
