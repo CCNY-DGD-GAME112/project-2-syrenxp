@@ -19,7 +19,7 @@ public class FirstPersonController : MonoBehaviour
     //A list of all the solid objects I'm currently touching
     public List<GameObject> Floors;
 
-
+    public float fallLimit = -10f;
 
     void Start()
     {
@@ -31,6 +31,10 @@ public class FirstPersonController : MonoBehaviour
     {
         //If my mouse goes left/right my body moves left/right
         
+        if (transform.position.y < fallLimit)
+        {
+            GameManager.Instance.GameOver();
+        }
 
         //Movement code
         if (WalkSpeed > 0)

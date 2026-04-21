@@ -8,6 +8,8 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("You Win!");
             Time.timeScale = 0;
+
+            GameManager.Instance.WinGame();
         }
     }
 }
