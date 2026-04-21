@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
-    public float timer = 120f;
+    public float timer = 60f;
     public TextMeshProUGUI timerText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

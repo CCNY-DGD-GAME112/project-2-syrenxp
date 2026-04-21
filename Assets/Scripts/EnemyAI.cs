@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 2f;
     public float moveDistance = 25f;
 
-    public float visionDistance = 5f;
+    public float visionRadius = 5f;
 
     public int direction = 1;
 
@@ -45,17 +45,11 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
 
-        Vector3 visionDirection = Vector3.right * direction;
-        
-        // RAYCAST 
-        RaycastHit hit;
+       Collider[] hits = Physics.OverlapSphere(transform.position, visionRadius);
 
-        if (Physics.Raycast(
-            transform.position, visionDirection,
-            out hit,
-            visionDistance))
+        foreach (Collider hit in hits)
         {
-            if (hit.collider.CompareTag("Player"))
+            if (hit.GetComponent<Collider>().CompareTag("Player"))
             {
                 Debug.Log("Player detected");
 
@@ -72,13 +66,7 @@ public class EnemyMovement : MonoBehaviour
 
         // Vision ray
         Gizmos.color = Color.red;
-        Vector3 visionDirection = Vector3.right * direction;
-        
-        
-       Gizmos.DrawLine(
-            transform.position,
-            transform.position + visionDirection * visionDistance);
-            
+        Gizmos.DrawWireSphere(transform.position, visionRadius);
        
     }
 }
